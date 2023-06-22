@@ -4,7 +4,7 @@ const HomeShowcase = () => {
   return (
     <div className="container mx-auto bg-light-bg p-10 flex flex-col items-center justify-center rounded">
       <img src={header_image} alt="showcase header image" />
-      <button className="py-2 mt-8 relative z-10 px-10 inline-block bg-transparent text-black text-lg font-bold rounded-full border-2 border-primary">
+      <button className="py-2 mt-8 relative z-10 px-10 inline-block bg-transparent text-black text-lg font-bold rounded-full border-2 border-primary hover:text-primary transition-colors duration-200">
         Shop Now
       </button>
       <img src={main_image} className="-mt-5" alt="showcase main image" />

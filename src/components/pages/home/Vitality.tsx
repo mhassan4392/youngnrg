@@ -56,7 +56,7 @@ const HomeVitality = () => {
                 dangerouslySetInnerHTML={{ __html: card.desc }}
               ></p>
               {card.shop ? (
-                <button className="py-2 px-10 inline-block bg-transparent text-black text-lg font-bold rounded-full border-2 border-primary">
+                <button className="py-2 px-10 inline-block bg-transparent text-black text-lg font-bold rounded-full border-2 border-primary hover:text-primary transition-colors duration-200">
                   Shop Now
                 </button>
               ) : (
