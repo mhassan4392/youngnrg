@@ -1,7 +1,10 @@
 import { useState } from "react";
-import vitality_image from "../../../assets/images/home/vitality.png";
+import vitality1 from "../../../assets/images/home/vitality1.png";
+import vitality2 from "../../../assets/images/home/vitality2.png";
+import vitality3 from "../../../assets/images/home/vitality3.png";
 
 type Card = {
+  image: string;
   title: string;
   desc: string;
   shop: boolean;
@@ -10,12 +13,19 @@ type Card = {
 const HomeVitality = () => {
   const [cards] = useState<Card[]>([
     {
+      image: vitality1,
       title: "Cosmetics",
       desc: "Eyes, Lips, Nails <br /> and Brows",
       shop: true,
     },
-    { title: "Skin Care", desc: "Eyes, Face, Body and Hair", shop: false },
     {
+      image: vitality2,
+      title: "Skin Care",
+      desc: "Eyes, Face, Body and Hair",
+      shop: false,
+    },
+    {
+      image: vitality3,
       title: "Health",
       desc: "Brain, Heart, Gut and <br /> Weight Management",
       shop: false,
@@ -23,8 +33,10 @@ const HomeVitality = () => {
   ]);
   return (
     <div className="container mx-auto bg-light-bg p-10 flex flex-col items-center justify-center rounded my-10">
-      <h2 className="text-3xl font-bold mb-5">Full Body Vitality</h2>
-      <p className="text-xl font-semibold">Your Journey begins here</p>
+      <h2 className="text-[40px] font-bold mb-6 mt-3">Full Body Vitality</h2>
+      <p className="text-xl font-semibold">
+        Your Journey begins <span className="font-bold">here</span>
+      </p>
       <p className="text-xl font-semibold text-center">
         Indviduals can embrace a youthful feeling by focusing on beauty, <br />{" "}
         health and stamina leading to a more fulfilling and energetic lifestyle
@@ -36,7 +48,7 @@ const HomeVitality = () => {
             key={i}
             className="bg-white p-8 flex flex-col items-center rounded"
           >
-            <img src={vitality_image} alt="" />
+            <img src={card.image} alt="" />
             <div className="grow flex flex-col items-center justify-between space-y-4 mt-3">
               <h3 className="text-3xl font-bold">{card.title}</h3>
               <p
