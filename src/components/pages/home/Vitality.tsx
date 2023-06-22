@@ -46,7 +46,7 @@ const HomeVitality = () => {
         {cards.map((card, i) => (
           <div
             key={i}
-            className="bg-white p-8 flex flex-col items-center rounded"
+            className="bg-white p-8 flex flex-col items-center rounded shadow-lg"
           >
             <img src={card.image} alt="" />
             <div className="grow flex flex-col items-center justify-between space-y-4 mt-3">

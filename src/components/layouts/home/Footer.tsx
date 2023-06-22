@@ -40,7 +40,7 @@ const HomeFooter = () => {
               {icons.map((icon, i) => (
                 <div
                   key={i}
-                  className="text-3xl text-white font-bold bg-primary rounded-full p-3"
+                  className="text-3xl text-white font-bold bg-primary rounded-full p-3 cursor-pointer hover:bg-opacity-90 transition-all duration-200"
                 >
                   {icon}
                 </div>
@@ -113,9 +113,9 @@ const HomeFooter = () => {
               <FaLocationArrow className="absolute right-5" />
             </div>
 
-            <div className="flex items-center space-x-4 text-[50px] text-[#999] mt-5">
-              <FaCcMastercard />
-              <FaCcVisa />
+            <div className="flex items-center space-x-4 text-[50px] mt-5">
+              <FaCcMastercard className="cursor-pointer text-[#999] hover:text-black transition-colors duration-200" />
+              <FaCcVisa className="cursor-pointer text-[#999] hover:text-black transition-colors duration-200" />
             </div>
           </div>
         </div>
