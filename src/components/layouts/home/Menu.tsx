@@ -16,14 +16,14 @@ const HomeNavbarMenu = ({ show, links }: Props) => {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 50 }}
-          className="absolute top-20 left-0 right-0 bg-white !m-0 p-5 z-20"
+          className="fixed top-20 left-0 right-0 bg-white !m-0 p-5 z-50"
         >
           <div className="flex flex-col items-center justify-center space-y-2">
             {links.map((link, i) => (
               <Link
                 key={i}
                 to={link.path}
-                className="text-lg hover:text-primary font-semibold transition-colors duration-200 uppercase"
+                className="hover:text-primary f-q-extrabold transition-colors duration-200 uppercase"
               >
                 {link.title}
               </Link>

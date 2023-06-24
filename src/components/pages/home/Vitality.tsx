@@ -32,35 +32,44 @@ const HomeVitality = () => {
     },
   ]);
   return (
-    <div className="container mx-auto bg-light-bg p-10 flex flex-col items-center justify-center rounded my-10">
-      <h2 className="text-[40px] font-bold mb-6 mt-3">Full Body Vitality</h2>
-      <p className="text-xl font-semibold">
-        Your Journey begins <span className="font-bold">here</span>
+    <div className="container mx-auto bg-light-bg py-5 px-2 flex flex-col items-center justify-center rounded my-3">
+      <h2 className="text-lg sm:text-sm md:text-lg lg:text-2xl xl:text-3xl f-q-extrabold mb-2 mt-2 lg:mb-4">
+        Full Body Vitality
+      </h2>
+      <p className="font-semibold leading-tight text-xs sm:text-[11px] md:text-sm f-q-regular lg:text-base xl:text-lg">
+        Your Journey begins{" "}
+        <span className="f-q-extrabold font-extrabold">here</span>
       </p>
-      <p className="text-xl font-semibold text-center">
+      <p className="leading-tight font-semibold text-center text-xs sm:text-[11px] md:text-sm lg:text-base xl:text-lg">
         Indviduals can embrace a youthful feeling by focusing on beauty, <br />{" "}
         health and stamina leading to a more fulfilling and energetic lifestyle
       </p>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-14">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 px-4 w-full mt-10">
         {cards.map((card, i) => (
           <div
             key={i}
-            className="bg-white p-8 flex flex-col items-center rounded shadow-lg"
+            className="bg-white p-8 sm:p-6 flex flex-col items-center rounded shadow-lg"
           >
-            <img src={card.image} alt="" />
+            <img
+              src={card.image}
+              className="w-full rounded-full max-w-[230px] lg:max-w-[210px] xl:max-w-[270px]"
+              alt=""
+            />
             <div className="grow flex flex-col items-center justify-between space-y-4 mt-3">
-              <h3 className="text-3xl font-bold">{card.title}</h3>
+              <h3 className="text-lg sm:text-base md:text-lg lg:text-2xl xl:text-3xl f-q-extrabold">
+                {card.title}
+              </h3>
               <p
-                className="text-center text-xl font-medium"
+                className="text-center text-sm sm:text-[11px] md:text-sm lg:text-base xl:!text-[19px] f-q-regular"
                 dangerouslySetInnerHTML={{ __html: card.desc }}
               ></p>
               {card.shop ? (
-                <button className="py-2 px-10 inline-block bg-transparent text-black text-lg font-bold rounded-full border-2 border-primary hover:text-primary transition-colors duration-200">
+                <button className="w-[90px] h-[28px] md:w-[100px] md:h-[32px] lg:w-[140px] lg:h-[40px] xl:w-[170px] xl:h-[50px] text-[9px] md:text-[10px] lg:text-xs xl:text-sm f-q-heavy inline-block bg-transparent text-black font-bold rounded-full border-2 border-primary hover:text-primary transition-colors duration-200">
                   Shop Now
                 </button>
               ) : (
-                <p className="text-xl font-semibold text-primary pb-2">
+                <p className="text-sm sm:text-[10px] md:text-[11px] lg:text-sm xl:text-base f-q-heavy text-[#ff652c] pb-2 uppercase">
                   Coming Soon
                 </p>
               )}

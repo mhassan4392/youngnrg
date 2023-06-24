@@ -1,3 +1,55 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.px15 {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@font-face {
+  font-family: "Besporh";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Besporh"), url("./assets/fonts/Besporh.otf") format("opentype");
+}
+
+.f-besporh {
+  font-family: "Besporh";
+}
+
+@font-face {
+  font-family: "Qartella ExtraBold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Qartella ExtraBold"),
+    url("./assets/fonts/Qartella-ExtraBold.otf") format("opentype");
+}
+
+.f-q-extrabold {
+  font-family: "Qartella ExtraBold";
+}
+
+@font-face {
+  font-family: "Qartella Heavy";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Qartella Heavy"),
+    url("./assets/fonts/Qartella-Heavy.otf") format("opentype");
+}
+
+.f-q-heavy {
+  font-family: "Qartella Heavy";
+}
+
+@font-face {
+  font-family: "Qartella Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Qartella Regular"),
+    url("./assets/fonts/Qartella-Regular.otf") format("opentype");
+}
+
+.f-q-regular {
+  font-family: "Qartella Regular";
+}
