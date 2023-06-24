@@ -5,8 +5,29 @@ import post3 from "../../../assets/images/home/post3.png";
 import post4 from "../../../assets/images/home/post4.png";
 import { useState } from "react";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import { Scrollbar } from "swiper";
+
 const HomePosts = () => {
-  const [posts] = useState<string[]>([post1, post2, post3, post4]);
+  const [posts] = useState([
+    post1,
+    post2,
+    post3,
+    post4,
+    post1,
+    post2,
+    post3,
+    post4,
+    post1,
+    post2,
+    post3,
+    post4,
+    post1,
+    post2,
+    post3,
+    post4,
+  ]);
   return (
     <div className="container mx-auto py-5 my-5 flex flex-col items-center justify-center">
       <img
@@ -20,12 +41,12 @@ const HomePosts = () => {
       <p className="f-q-regular text-xs sm:text-[11px] md:text-xs lg:text-base xl:text-lg text-center mb-14">
         Join The Young NRG Community: Tag Us In Your Posts!
       </p>
-      <div className="grid grid-cols-1 sm:grid-cols-4 gap-5">
+      {/* <div className="grid grid-cols-1 sm:grid-cols-4 gap-5">
         {posts.map((post, i) => (
           <img src={post} key={i} className="rounded" />
         ))}
-      </div>
-      <div className="grid grid-cols-4 rounded overflow-hidden w-5/6 mt-10">
+      </div> */}
+      {/* <div className="grid grid-cols-4 rounded overflow-hidden w-5/6 mt-10">
         {Array.from({ length: 4 }).map((_ar, i) => (
           <div
             key={i}
@@ -36,7 +57,42 @@ const HomePosts = () => {
             {i}
           </div>
         ))}
-      </div>
+      </div> */}
+
+      <Swiper
+        className="w-full"
+        spaceBetween={20}
+        breakpoints={{
+          0: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          420: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          520: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 4,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 4,
+            spaceBetween: 20,
+          },
+        }}
+        scrollbar={true}
+        modules={[Scrollbar]}
+      >
+        {posts.map((p, i) => (
+          <SwiperSlide key={i}>
+            <img src={p} className="rounded w-full" alt="" />
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </div>
   );
 };

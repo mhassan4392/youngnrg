@@ -18,6 +18,18 @@
   font-family: "Besporh";
 }
 
+.swiper {
+  @apply !pb-10 overflow-visible;
+}
+
+.swiper-scrollbar {
+  @apply !bg-[#cdcdcd] !bg-opacity-50 !bottom-2 !self-center;
+}
+
+.swiper-scrollbar-drag {
+  @apply !bg-primary;
+}
+
 @font-face {
   font-family: "Qartella ExtraBold";
   font-style: normal;
